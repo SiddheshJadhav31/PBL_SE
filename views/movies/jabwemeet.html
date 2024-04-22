@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jab We Met Travel Itinerary</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F7EBCC;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    h1 {
+      color: #2D3678;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .timeline {
+      list-style-type: none;
+      padding: 0;
+    }
+    .timeline-item {
+      margin-bottom: 40px;
+      animation: fadeInUp 0.5s ease forwards;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: slideInRight 0.5s ease forwards;
+    }
+    .timeline-content h2 {
+      color: #2D3678;
+      margin-top: 0;
+      font-size: 24px;
+    }
+    .timeline-content p {
+      color: #666;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jab We Met Travel Itinerary</h1>
+    <ul class="timeline">
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h2>Mumbai</h2>
+          <p>Start your journey in the vibrant city of Mumbai, where the lively spirit of Geet and the serendipitous encounters begin.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mumbai_skyline_panorama.jpg/800px-Mumbai_skyline_panorama.jpg" alt="Mumbai">
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h2>Rohtang Pass</h2>
+          <p>Embark on an adventurous journey to Rohtang Pass, a place where Aditya and Geet's destinies intertwine amidst the breathtaking beauty of the mountains.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rohtang_Pass_2016.jpg/800px-Rohtang_Pass_2016.jpg" alt="Rohtang Pass">
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h2>Manali</h2>
+          <p>Experience the charm of Manali, where Aditya and Geet's journey unfolds, filled with laughter, love, and unexpected twists.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Manali_town_hall.JPG/800px-Manali_town_hall.JPG" alt="Manali">
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h2>Bhatinda</h2>
+          <p>Visit Bhatinda, Geet's hometown, and immerse yourself in the colorful and vibrant Punjabi culture.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Geet.jpg/800px-Geet.jpg" alt="Bhatinda">
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h2>Shimla</h2>
+          <p>Explore the picturesque hill station of Shimla, where Aditya and Geet's journey takes unexpected turns, leading to self-discovery and love.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Shimla.jpg/800px-Shimla.jpg" alt="Shimla">
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

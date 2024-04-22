@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Page in HTML with CSS Code Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    .header-class {
+      background-color: black;
+      color: white;
+    }
+    .navigation {
+      display: flex;
+    }
+    .item {
+      list-style: none;
+      padding: 10px 25px;
+      color: white;
+    }
+    body {
+      background-image: linear-gradient(135deg,#F7EBCC, #74ADB0 , #2D3678 );
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: "Open Sans", sans-serif;
+      color: #333333;
+    }
+    .box-form {
+      margin: 40px auto;
+      width: 50%;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      box-shadow: 0 0 20px 6px #090b6f85;
+    }
+    .box-form .left {
+      color: #FFFFFF;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(https://speedy.uenicdn.com/0a32028f-5d1f-47f0-9c2b-fab3ca40486c/c562_a/image/upload/v1664897750/business/d70189273ca544e4b898a203dd40d6a5.jpg);
+      flex: 1 1 50%;
+    }
+    .box-form .left .overlay {
+      padding: 30px;
+    }
+    .box-form .left .overlay h1 {
+      font-size: 5vmax;
+      line-height: 1;
+      font-weight: 800;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .box-form .left .overlay span p {
+      margin-top: 30px;
+      font-weight: 900;
+    }
+    .box-form .left .overlay span a {
+      background: #3b5998;
+      color: #FFFFFF;
+      margin-top: 10px;
+      padding: 14px 50px;
+      border-radius: 100px;
+      display: inline-block;
+      box-shadow: 0 3px 6px 1px #042d4657;
+    }
+    .box-form .left .overlay span a:last-child {
+      background: #1dcaff;
+      margin-left: 30px;
+    }
+    .box-form .right {
+      padding: 40px;
+      flex: 1 1 50%;
+    }
+    .box-form .right h5 {
+      font-size: 4vmax;
+      line-height: 0;
+    }
+    .box-form .right p {
+      font-size: 14px;
+      color: #B0B3B9;
+    }
+    .box-form .right .inputs input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-top: 25px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #B0B3B9;
+    }
+    .box-form .right .remember-me--forget-password {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .box-form .right button {
+      color: #fff;
+      font-size: 14px;
+      padding: 12px 35px;
+      border-radius: 50px;
+      border: 0;
+      outline: 0;
+      box-shadow: 0px 4px 20px 0px #2D3678;
+      background-image: linear-gradient(135deg, #2D3678 10%,#2D3678);
+    }
+    label {
+      display: block;
+      position: relative;
+      margin-left: 30px;
+    }
+    label::before {
+      content: ' \f00c';
+      position: absolute;
+      font-family: FontAwesome;
+      background: transparent;
+      border: 3px solid #2D3678;
+      border-radius: 4px;
+      color: transparent;
+      left: -30px;
+      transition: all 0.2s linear;
+    }
+    label:hover::before {
+      font-family: FontAwesome;
+      content: ' \f00c';
+      color: #fff;
+      cursor: pointer;
+      background: #2D3678;
+    }
+    label span.text-checkbox {
+      display: inline-block;
+      height: auto;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s linear;
+    }
+    label input[type="checkbox"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<header class="header-class">
+  <nav class="navbar">
+    <ul class="navigation">
+      <a class="item" href="index">Home</a>
+      <a class="item" href="bollywood" >Bollywood</a>
+      <a class="item" href="about">About Us</a>
+    </ul>
+    <div class="d-flex align-items-center">
+      <a href="login">
+        <button style="text-decoration: none" type="button" class="btn-primary rounded btn px-3 me-2">Login</button>
+      </a>
+      <a href="register">
+        <button style="width: max-content" type="button" class="nav-items btn btn-success rounded ms-3 px-3 mx-2"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+      </a>
+    </div>
+  </nav>
+</header>
+<div class="box-form">
+  <div class="left">
+    <div class="overlay">
+      <h1 style="color: #2D3678;">Roam Ready</h1>
+      <br>
+      <p style="color: #2D3678;">Platform for your personalized gateway for unforgettable journey. Join us on a journey of discovery, where every destination is a story to be told.</p>
+      <span>
+        <p>Login with social media</p>
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-google" aria-hidden="true"></i> Login with Google</a>
+      </span>
+    </div>
+  </div>
+  <div class="right">
+    <h5>Signup</h5>
+    <form>
+      <div class="inputs">
+        <input type="text" placeholder="Username">
+        <br>
+        <input type="password" placeholder="Password">
+        <br>
+        <input type="password" placeholder="Confirm Password">
+      </div>
+    </form> 
+    <br><br>
+    <div class="remember-me--forget-password">
+      <label>
+        <input type="checkbox" name="item" checked/>
+        <span class="text-checkbox">Remember me</span>
+      </label>
+    </div>
+    <br>
+    <div style="display:flex;justify-content: center;align-items: center;">
+      <button>Signup</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

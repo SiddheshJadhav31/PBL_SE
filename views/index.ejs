@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <!-- Custom Styles -->
+    <style>
+        /* Main Content */
+        .header-class{
+            background-color: black;
+            color: white;
+        }
+        .navigation {
+            display: flex;
+        }
+        .item {
+            list-style: none;
+            padding: 10px 25px;
+            color: white;
+        }
+        main {
+            background-image: url("https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Add some padding for better spacing */
+        }
+        /* Form Styling */
+        .container {
+            width: 350px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Add some bottom margin for spacing between form groups */
+        }
+        .form-inline label {
+            display: block; /* Display labels as block for better alignment */
+            margin-bottom: 5px; /* Add some bottom margin for spacing */
+        }
+        .form-control {
+            width: 100%;
+            height: 32px;
+            border-radius: 10px; /* Make form controls fill the entire width */
+        }
+        /* Button Styling */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover transition */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header class="header-class">
+    <nav class="navbar">
+        <ul class="navigation">
+            <a class="item" href="index">Home</a>
+            <a class="item" href="bollywood" >BollyWood</a>
+            <a class="item" href="about">About Us</a>
+        </ul>
+        <div class="d-flex align-items-center">
+                   
+
+            <a href="login">
+              <button
+                style="text-decoration: none"
+                type="button"
+                class="btn-primary rounded btn px-3 me-2"
+              >
+                Login
+              </button>
+            </a>
+            <a href="register">
+              <button
+                style="width: max-content"
+                type="button"
+                class="nav-items btn btn-success rounded ms-3 px-3 mx-2"
+              >
+                <i class="fa-solid fa-user-plus"></i> Sign Up
+              </button>
+            </a>
+          </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Roam Ready</h1>
+            </div>
+        </div>
+        <!-- Form goes here -->
+        <form action="/" method="POST" class="form-inline">
+            <div class="form-group">
+                <label for="source">From:</label>
+                <input type="text" class="form-control" name="source" id="source" placeholder="Enter your boarding point" required/>
+            </div>
+            <div class="form-group">
+                <label for="destination">To:</label>
+                <input type="text" class="form-control" name="destination" id="destination" placeholder="Enter your destination" required/>
+            </div>
+            <span class="form-group">
+                <label for="date">Travel Date:</label>
+                <input type="date" class="form-control" name="date" id="date" required/>
+                <label for="return">Return Date:</label>
+                <input type="date" class="form-control" name="return" id="return" required/>
+            </span>              
+        </form>
+        <a href="dashboard.html">
+            <button style="margin-top: 20px; padding: 4px; margin-left: 130px; width: 80px; height: 30px;" type="submit" class="btn btn-primary">Submit</button>
+          </a>
+    </div>
+</main>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

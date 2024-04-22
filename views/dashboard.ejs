@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+  <title>Weather and Itinerary Information</title>
+  <style>
+    /* Global Styles */
+    .header-class{
+            background-color: black;
+            color: white;
+        }
+        .navigation {
+            display: flex;
+        }
+        .item {
+            list-style: none;
+            padding: 10px 25px;
+            color: white;
+        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Weather Info Styles */
+    .weather-info, .itinerary-info, .booking-info {
+      margin-bottom: 40px;
+    }
+
+    .weather-info h1 {
+      color: #007bff;
+    }
+
+    .location-info span {
+      font-weight: bold;
+    }
+
+    .weather-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .weather-table th, .weather-table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .weather-table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Itinerary Info Styles */
+    .itinerary-info h1 {
+      color: #28a745;
+    }
+
+    /* Booking Info Styles */
+    .booking-info h1 {
+      color: #dc3545;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header class="header-class">
+    <nav class="navbar">
+        <ul class="navigation">
+            <a class="item" href="index">Home</a>
+            <a class="item" href="bollywood" >Bollywood</a>
+            <a class="item" href="about">About Us</a>
+        </ul>
+        <div class="d-flex align-items-center">
+                   
+
+            <a href="login">
+              <button
+                style="text-decoration: none"
+                type="button"
+                class="btn-primary rounded btn px-3 me-2"
+              >
+                Login
+              </button>
+            </a>
+            <a href="register">
+              <button
+                style="width: max-content"
+                type="button"
+                class="nav-items btn btn-success rounded ms-3 px-3 mx-2"
+              >
+                <i class="fa-solid fa-user-plus"></i> Sign Up
+              </button>
+            </a>
+          </div>
+    </nav>
+</header>
+  <div class="container">
+    <!-- Weather Information -->
+    <section class="weather-info">
+      <h1 style="text-align: center;">Weather Information</h1>
+      <div class="location-info">
+        <h3>Location: <span>{{weather_data['resolvedAddress']}}</span></h3>
+      </div>
+      <div class="table-wrapper">
+        <table class="weather-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Conditions</th>
+              <th>Max Temperature (°C)</th>
+              <th>Min Temperature (°C)</th>
+            </tr>
+            </thead>
+          <tbody>
+
+            <tr>
+              <td>{{ weather_data_item['datetime'] }}</td>
+              <td>{{ weather_data_item['conditions'] }}</td>
+              <td>{{ weather_data_item['tempmax'] }}</td>
+              <td>{{ weather_data_item['tempmin'] }}</td>
+            </tr>
+          </tbody>
+
+          <thead>
+          <tr>
+            <th>Precipitation Probability</th>
+            <th>Humidity</th>
+            <th>Alerts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ weather_data_item['precipprob'] }}</td>
+            <td>{{ weather_data_item['humidity'] }}</td>
+            <td>{{ weather_data_item['description'] }}</td>
+          </tr>
+        </tbody>
+
+        </table>
+      </div>
+    </section>
+
+    <!-- Itinerary Information -->
+    <section class="itinerary-info">
+      <h1>Planned Itinerary</h1>
+      <p><strong>This is a tentative itinerary, so please be flexible, it may have some mistakes.</strong></p>
+      <div id="markdown-content">{{ plan }}</div>
+    </section>
+
+    <!-- Booking Information -->
+    <section class="booking-info">
+      <h1>Hotels & Flight Booking</h1>
+      <a href="https://www.booking.com" target="_blank" class="btn">Book Now</a>
+    </section>
+  </div>
+</body>
+</html>
